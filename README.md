@@ -13,10 +13,10 @@ The domain of knowledge this system will cover is UCONN Storrs on-campus housing
 | # | Source | Type | URL or file path |
 |---|--------|------|-----------------|
 | 1 |UCONN Housing Contract | PDF |https://campushousing.media.uconn.edu/wp-content/uploads/sites/3384/2026/05/2026-2027-Housing-Contract-draft-4.29.26.pdf |
-| 2 |UCONN Housing Rates |Website |https://campushousing.uconn.edu/manage-housing/room-rates/ |
+| 2 |UCONN Room Rates |Website |https://campushousing.uconn.edu/manage-housing/room-rates/ |
 | 3 |UCONN Resident Requirements | Website |https://campushousing.uconn.edu/living-on-campus/policies/residency-requirement-information/ |
-| 4 | Unofficial Dorm Rankings 1|Website |https://www.ratemydorm.com/dorms-ranked/university-of-connecticut |
-| 5 |Unoffical Dorm Rankings 2  |Website |https://prked.com/post/best-university-of-connecticut-dorms |
+| 4 | RateMyDorm Dorm Rankings 1|Website |https://www.ratemydorm.com/dorms-ranked/university-of-connecticut |
+| 5 |Prked Dorm Rankings 2  |Website |https://prked.com/post/best-university-of-connecticut-dorms |
 | 6 |UCONN Housing FAQ |Website |https://campushousing.uconn.edu/frequently-asked-questions/ |
 | 7 |UCONN Housing Dates |Website |https://campushousing.uconn.edu/manage-housing/important-dates/ |
 | 8 |Unoffical Dorm Guide |PDF | https://docs.google.com/document/d/1CXZzsvqpiB5_siL-akbl4KZ99m9aTGLSgaLiTpVDjRk/edit?tab=t.0|

@@ -7,5 +7,6 @@ python-dotenv==1.0.1
 # gradio>=6.9.0
 # streamlit>=1.40.0
 
-# Document ingestion — for parsing .pdf files in documents/:
+# Document ingestion — for parsing .pdf and .html files in documents/:
 pdfplumber==0.11.4
+beautifulsoup4==4.14.3

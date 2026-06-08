@@ -16,8 +16,8 @@ CHROMA_PATH = "./chroma_db"
 # Chunking parameters for splitting documents into sections for embedding and retrieval
 CHUNK_SIZE = 400        
 MAX_CHUNK_SIZE = 800    
-CHUNK_OVERLAP = 60   
-MIN_CHUNK_LENGTH = 50   
+CHUNK_OVERLAP = 80   
+MIN_CHUNK_LENGTH = 100   
 
 # Retrieval parameters
 N_RESULTS = 4

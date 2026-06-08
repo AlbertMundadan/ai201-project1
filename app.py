@@ -22,7 +22,6 @@ def handle_query(question):
     except Exception as e:
         return f"Something went wrong while answering: {e}", ""
 
-    # Retrieval transparency: unique "Title — section" lines, in retrieval order.
     seen = []
     for c in chunks:
         label = c["title"].replace("_", " ")

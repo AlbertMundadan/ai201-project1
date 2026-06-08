@@ -102,6 +102,120 @@ I retrieve 4 chunks per query (N_RESULTS = 4). With a 400-char target chunk size
 If I were deploying this system for real users and costs were not a concern, I would likely prefer larger models that would be more reliable and hosted on a server over lightweight models hosted locally. In exchange there would be some network latency for requests and server costs. This would be less private, but these documents are all public information, so that is not as much of a concern. Furthermore, the token limit on the model influenced my chunk sizing. With a different model, it may be beneficial to make larger chunks for long sections (for example in the housing contract). Another limitation of this model is that it only works for English, which isn't a major concern but is worth noting.  
 
 ---
+## Retrival Results Testing
+**Samples:**
+1. Query: Are pets allowed in the dorms?
+
+[distance=0.284] Housing_Contract — section='8.14 PETS' (Housing_Contract.pdf)
+8.14 PETS
+Pets, including visiting pets, are prohibited in on-campus housing. Aquarium fish are approved for tanks up to 10 gallons. Service and
+emotional support animals, where appropriate, must be approved by the University through the Animals on Campus Policy (Center for
+Students with Disabilities and Campus Housing).
+
+[distance=0.429] Housing_Contract — section='8.17 SAFETY AND SECURITY' (Housing_Contract.pdf)
+should always lock their
+room/suite/apartment/house doors. When exiting on-campus housing through locked exterior doors, residents are responsible for leaving the
+doors locked. Residents are prohibited from propping, tampering with and/or vandalizing doors.
+
+[distance=0.443] Housing_Contract — section='8.10 GUESTS' (Housing_Contract.pdf)
+shall be accompanied by their resident host at all times. University staff members may require guests
+to leave the premises, as well as deny any residential
+student the privilege of hosting guests. During special events/periods of time, the University may further limit the number of guests allowed
+in on-campus housing and may impose additional limitations or require additional passes.
+
+[distance=0.454] Housing_Contract — section='' (Housing_Contract.pdf)
+guests are limited (see Section 8. Rules and Regulations). 6.9 All room changes must be authorized by appropriate Campus Housing staff. Unauthorized room changes, including between bedrooms
+in apartments, may result in the loss of the room change privilege, additional charges, and/or disciplinary action.
+
+--- 
+- This retrival accurately pulls relevant information in the first chunk. The other 3 are not particularly relevant but this can still be considered a success. 
+---
+
+2. Query: What do students say about Werth dorms?
+
+[distance=0.275] Dorm_Guide — section='Werth Tower' (Dorm_Guide.pdf)
+Werth Tower
+General Review From what I know about, basically all freshmen try to go to a Learning Community to get into Werth
+(Outsourced Review) Tower. They are the newest dorms, so it is nicer, however the rooms are slightly smaller. They have Air
+Conditioning which is probably the main reason people want it, even though it really only gets hot
+
+[distance=0.290] Ratemydorm_Dorm_Rankings — section='' (RateMyDorm_Dorm_Rankings.html)
+the dorms are the best aspect of the campus as a whole. Plus everyone is close by, everyone is welcoming, people love cooking for their neighbors, and parties in the apartments top and basement frat party you'll get at Storrs. I have lived in each styled dorm they offer (single, double, triple, even a 5 person apartment) I promise you the dorms are spectacular.
+
+[distance=0.311] Housing_Faq — section='' (Housing_FAQ.html)
+There are designed freshman and sophomore areas of campus, including Werth Tower (primarily students in Learning Communities), Alumni Quadrangle, Towers Quadrangle, Buckley/Shippee (Honors students only), and Hicks and Grange Halls (East Campus). These areas are designed to help students adjust to college life and transition to community style living. Students will be selecting their assignments primarily located within these areas with other freshmen students as roommates, or with 2
+nd
+ year students as roommates who are familiar with these areas and can serve as resources. The majority of rooms on campus are doubles, so most freshmen will live in these types of spaces. There are some triples and quads that will be available through the online selection process.
+
+[distance=0.326] Prked_Dorm_Rankings — section='' (Prked_Dorm_Rankings.html)
+06/13/24
+
+by
+
+Zack Saadioui
+Best University of Connecticut Dorms: A Comprehensive Guide
+
+Table of Contents
+
+ Werth Tower: The Top Pick for Community and Comfort
+Hilltop Apartments: Best for Independent Living
+Northwest Dorms: Great for Freshmen Integration
+South Campus: A Blend of Convenience and Comfort 
+Garrigus Suites: Luxurious Living with a View
+
+--- 
+- This retrival accurately pulls relevant information to the Werth dorms in all chunks (with the second being more broad about all dorms as a whole). 
+---
+
+3.  Query: What amenities does Buckley offer?
+
+[distance=0.390] Dorm_Guide — section='Buckley (Honors)' (Dorm_Guide.pdf)
+Buckley (Honors)
+General Review I only visited Buckley once, so most of this is based off of one of my friend's opinions and comments. He
+(Outsourced Review) did live in a quad, which was very large compared to other quads I saw, but he did mention that doubles
+were above average as well. This is good but Buckley is very far from anything on campus. Storrs center
+is right outside your door, but the closest building is the music building. Since Buckley is probably a 5
+minute walk from South, you're looking at 20-25 minutes to get to Chem/MSB, so buses are needed..
+Luckily, Storrs center is there so you can get Insomnia or Moe's at any time you want.
+
+[distance=0.395] Dorm_Guide — section='' (Dorm_Guide.pdf)
+Address 1276 Storrs Rd, Storrs, CT 06269
+Website Specifications https://reslife.uconn.edu/housing-options/traditional-housing/buckley-shippee/
+Ratings Size: 8/10 (Fairly Large) Proximity to Campus: Overall: 5/10
+
+2/10 (Nothing Close)
+
+Amenities Bed, Desk, Chair, Dresser
+Bed: XL Twin (80’’ x 36”) [Bunk, Loft, or Floor]
+
+Cable/Internet: Included
+
+Closest Dining Hall Whitney Dining Hall
+
+[distance=0.421] Dorm_Guide — section='' (Dorm_Guide.pdf)
+times hanging with people in their
+room. Hope this helps! Address 1276 Storrs Rd, Storrs, CT 06269
+Website Specifications https://reslife.uconn.edu/housing-options/traditional-housing/buckley-shippee/
+Ratings Size: 5/10 (Average, Proximity to Campus: Overall: 5/10
+Small) 2/10 (Same as Buckley)
+
+[distance=0.493] Dorm_Guide — section='Mailroom Buckley Hall, Lower Level, Elevator Lobby' (Dorm_Guide.pdf)
+Mailroom Buckley Hall, Lower Level, Elevator Lobby
+Learning Communities First Year Honors/Honors, Honors Program Office (Buckley Hall), Honors UNIV classes in Buckley
+classroom
+Recreation Game rooms w/pool, Ping-pong tables, Games and sports equipment checkout at Shippee, Outdoor
+patio
+
+Elevator Access Yes
+
+Air Conditioners No
+HOUSING OPTION Single Tower
+Room Types Single Gender Floor: All floors
+
+--- 
+- This retrival accurately pulls multiple chunks related to the amentities that Buckley offers. Some chunks are more relevant than others but overall still can be considered a successful retrival. 
+---
+
 
 ## Grounded Generation
 
@@ -149,7 +263,7 @@ The sources and sections used by the LLM from the retreival stage are included b
 
 ---
 ## Query Interface
-- There are 3 visible boxes. The first is where the user inputs their question. The second shows the LLM response. The third shows all the sources the LLM recieved on the retrival stage. 
+- There are 3 visible boxes. The first is where the user inputs their question. The second shows the LLM response. The third shows all the sources the LLM recieved on the retrival stage. After typing the quetsion in the first box the user would click the ask button to submit the requets to the LLM. Sample Queries and responses are shown below in the evaluation report. 
 
 ## Evaluation Report
 
